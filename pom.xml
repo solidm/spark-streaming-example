@@ -25,8 +25,8 @@
     <maven.compiler.target>1.7</maven.compiler.target>
     <encoding>UTF-8</encoding>
     <scala.version>2.10.6</scala.version>
-    <scala.compat.version>2.10.6</scala.compat.version>
-    <spark.version>1.5.2</spark.version>
+    <scala.compat.version>2.10</scala.compat.version>
+    <spark.version>1.6.1</spark.version>
   </properties>
 
   <dependencies>
@@ -36,31 +36,30 @@
       <version>${scala.version}</version>
     </dependency>
     <dependency>
+    <groupId>org.scala-lang</groupId>
+     <artifactId>scala-compiler</artifactId>
+      <version>${scala.version}</version>
+    </dependency>
+    <dependency>
 	<groupId>org.scala-lang</groupId>
 	<artifactId>scala-reflect</artifactId>
-	<version>2.10.6</version>
+	<version>${scala.version}</version>
     </dependency>
     <dependency>
       <groupId>org.apache.spark</groupId>
       <artifactId>spark-core_2.10</artifactId>
-      <version>1.5.2</version>
+      <version>${spark.version}</version>
     </dependency>
     <dependency>
       <groupId>org.apache.spark</groupId>
       <artifactId>spark-streaming_2.10</artifactId>
       <version>${spark.version}</version>
       <scope>provided</scope>
-      <exclusions>
-        <exclusion>
-          <groupId>org.scala-lang</groupId>
-          <artifactId>scala-library</artifactId>
-        </exclusion>
-      </exclusions>
-    </dependency>
+   </dependency>
     <dependency>
 	<groupId>org.apache.spark</groupId>
 	<artifactId>spark-streaming-kafka_2.10</artifactId>
-	<version>1.5.2</version>
+	<version>${spark.version}</version>
    </dependency>
     <!-- Test -->
     <dependency>

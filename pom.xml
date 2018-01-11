@@ -21,12 +21,12 @@
   </repositories>
 
   <properties>
-    <maven.compiler.source>1.7</maven.compiler.source>
-    <maven.compiler.target>1.7</maven.compiler.target>
+    <maven.compiler.source>1.8</maven.compiler.source>
+    <maven.compiler.target>1.8</maven.compiler.target>
     <encoding>UTF-8</encoding>
-    <scala.version>2.10.6</scala.version>
-    <scala.compat.version>2.10</scala.compat.version>
-    <spark.version>1.6.1</spark.version>
+    <scala.version>2.11.11</scala.version>
+    <scala.compat.version>2.11.11</scala.compat.version>
+    <spark.version>2.2.1</spark.version>
   </properties>
 
   <dependencies>
@@ -47,18 +47,18 @@
     </dependency>
     <dependency>
       <groupId>org.apache.spark</groupId>
-      <artifactId>spark-core_2.10</artifactId>
+      <artifactId>spark-core_2.11</artifactId>
       <version>${spark.version}</version>
     </dependency>
     <dependency>
       <groupId>org.apache.spark</groupId>
-      <artifactId>spark-streaming_2.10</artifactId>
+      <artifactId>spark-streaming_2.11</artifactId>
       <version>${spark.version}</version>
       <scope>provided</scope>
    </dependency>
     <dependency>
 	<groupId>org.apache.spark</groupId>
-	<artifactId>spark-streaming-kafka_2.10</artifactId>
+	<artifactId>spark-streaming-kafka-0-10_2.11</artifactId>
 	<version>${spark.version}</version>
    </dependency>
     <!-- Test -->
@@ -70,13 +70,13 @@
     </dependency>
     <dependency>
       <groupId>org.specs2</groupId>
-      <artifactId>specs2-core_2.10</artifactId>
+      <artifactId>specs2-core_2.11</artifactId>
       <version>3.3</version>
       <scope>test</scope>
     </dependency>
    <dependency>
       <groupId>org.scalatest</groupId>
-      <artifactId>scalatest_2.10</artifactId>
+      <artifactId>scalatest_2.11</artifactId>
       <version>2.2.5</version>
       <scope>test</scope>
     </dependency>
